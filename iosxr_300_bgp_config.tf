@@ -5,18 +5,14 @@ resource "iosxr_router_bgp" "router_bgp_rrclient" {
   as_number                             = local.as_number
   bgp_router_id                         = each.value.bgp_router_id
   ibgp_policy_out_enforce_modifications = each.value.ibgp_policy_out_enforce_modifications
-  /*neighbors = [
+  neighbors = [
     for neighbor_name, neighbor_config in var.route_reflectors :
     {
-      neighbor_address                = neighbor_config.bgp_router_id
-      remote_as                       = local.as_number
-      use_neighbor_group              = iosxr_router_bgp_neighbor_group.neighbor_group_rr_client[each.key].name
-      advertisement_interval_seconds  = 10
-      ebgp_multihop_maximum_hop_count = 5
-      timers_holdtime                 = 40
-      timers_keepalive_interval       = 160
+      neighbor_address   = neighbor_config.bgp_router_id
+      remote_as          = local.as_number
+      use_neighbor_group = iosxr_router_bgp_neighbor_group.neighbor_group_rr_client[each.key].name
     }
-  ]*/
+  ]
 }
 
 
@@ -26,16 +22,13 @@ resource "iosxr_router_bgp" "router_bgp_rrpce" {
   device        = each.key
   as_number     = local.as_number
   bgp_router_id = each.value.bgp_router_id
-  /*neighbors = [
-    for neighbor_name, neighbor_config in var.route_reflectors :
+  neighbors = [
+    for neighbor_name, neighbor_config in var.rr_clients :
     {
-      neighbor_address                = neighbor_config.bgp_router_id
-      remote_as                       = local.as_number
-      use_neighbor_group              = iosxr_router_bgp_neighbor_group.neighbor_group_rr_client[each.key].name
-      advertisement_interval_seconds  = 10
-      ebgp_multihop_maximum_hop_count = 5
-      timers_holdtime                 = 40
-      timers_keepalive_interval       = 160
+      neighbor_address   = neighbor_config.bgp_router_id
+      remote_as          = local.as_number
+      use_neighbor_group = iosxr_router_bgp_neighbor_group.neighbor_group_rrpce[each.key].name
+
     }
-  ]*/
+  ]
 }
