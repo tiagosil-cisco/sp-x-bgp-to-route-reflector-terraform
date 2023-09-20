@@ -1,5 +1,5 @@
 resource "iosxr_router_bgp_neighbor_group" "neighbor_group_rr_client" {
-  for_each                       = var.rr_clients
+  for_each                       = local.rr_clients
   device                         = each.key
   as_number                      = each.value.as_number
   advertisement_interval_seconds = 10
@@ -27,7 +27,7 @@ resource "iosxr_router_bgp_neighbor_group" "neighbor_group_rr_client" {
 }
 
 resource "iosxr_router_bgp_neighbor_group" "neighbor_group_rrpce" {
-  for_each                       = var.route_reflectors
+  for_each                       = local.route_reflectors
   device                         = each.key
   as_number                      = each.value.as_number
   advertisement_interval_seconds = 10

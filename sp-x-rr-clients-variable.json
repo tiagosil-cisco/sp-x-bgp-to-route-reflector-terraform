@@ -1,0 +1,45 @@
+{
+    "pe01": {
+      "as_number": 65331,
+      "af_name": ["ipv4-labeled-unicast", "vpnv4-unicast", "vpnv6-unicast", "l2vpn-evpn"],
+      "allocate_label_akk": true,
+      "bgp_router_id": "10.31.1.1",
+      "ibgp_policy_out_enforce_modifications": true
+    },
+    "pe02": {
+      "as_number": 65331,
+      "af_name": ["ipv4-labeled-unicast", "vpnv4-unicast", "vpnv6-unicast", "l2vpn-evpn"],
+      "allocate_label_akk": true,
+      "bgp_router_id": "10.31.1.2",
+      "ibgp_policy_out_enforce_modifications": true
+    },
+    "pe03": {
+      "as_number": 65331,
+      "af_name": ["ipv4-labeled-unicast", "vpnv4-unicast", "vpnv6-unicast", "l2vpn-evpn"],
+      "allocate_label_akk": true,
+      "bgp_router_id": "10.31.1.7",
+      "ibgp_policy_out_enforce_modifications": true
+    },
+    "pe04": {
+      "as_number": 65331,
+      "af_name": ["ipv4-labeled-unicast", "vpnv4-unicast", "vpnv6-unicast", "l2vpn-evpn"],
+      "allocate_label_akk": true,
+      "bgp_router_id": "10.31.1.8",
+      "ibgp_policy_out_enforce_modifications": true
+    },
+    "asbr01": {
+      "as_number": 65331,
+      "af_name": ["ipv4-labeled-unicast", "vpnv4-unicast", "vpnv6-unicast", "l2vpn-evpn"],
+      "allocate_label_akk": true,
+      "bgp_router_id": "10.31.1.9",
+      "ibgp_policy_out_enforce_modifications": true
+    },
+    "asbr02": {
+      "as_number": 65331,
+      "af_name": ["ipv4-labeled-unicast", "vpnv4-unicast", "vpnv6-unicast", "l2vpn-evpn"],
+      "allocate_label_akk": true,
+      "bgp_router_id": "10.31.1.10",
+      "ibgp_policy_out_enforce_modifications": true
+    }
+  }
+  

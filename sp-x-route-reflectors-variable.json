@@ -1,0 +1,17 @@
+{
+    "rrpce01": {
+      "as_number": 65331,
+      "af_name": ["ipv4-labeled-unicast", "vpnv4-unicast", "vpnv6-unicast", "l2vpn-evpn"],
+      "allocate_label_akk": true,
+      "bgp_router_id": "10.31.1.11",
+      "ibgp_policy_out_enforce_modifications": true
+    },
+    "rrpce02": {
+      "as_number": 65331,
+      "af_name": ["ipv4-labeled-unicast", "vpnv4-unicast", "vpnv6-unicast", "l2vpn-evpn"],
+      "allocate_label_akk": true,
+      "bgp_router_id": "10.31.1.12",
+      "ibgp_policy_out_enforce_modifications": true
+    }
+  }
+  

@@ -1,7 +1,13 @@
 locals {
   project_title       = "SP-B"
   project_description = "Topology created using Terraform to represent SP-X"
+  routers             = jsondecode(file("${path.module}/sp-x-devices.json"))
+  rr_clients          = jsondecode(file("${path.module}/sp-x-rr-clients-variable.json"))
+  route_reflectors    = jsondecode(file("${path.module}/sp-x-route-reflectors-variable.json"))
 
+
+
+  /*
   routers = [
     {
       name = "pe01"
@@ -52,13 +58,14 @@ locals {
       host = "10.0.1.62"
     },
   ]
-
+*/
   xr_username = "admin"
   xr_password = "C!sco123"
 
   as_number = 65331
 }
 
+/*
 variable "rr_clients" {
   type = map(any)
   default = {
@@ -129,3 +136,4 @@ variable "route_reflectors" {
 
   }
 }
+*/
